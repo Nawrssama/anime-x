@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h1>Details about {{ kimitsu.char_name }}</h1>
+<h3>Added by : {{kimitsu.otaku_name}}</h3>
+<p>discription: {{ kimitsu.char_discription }}</p>
+<a href="{% url 'kimitsu_update' kimitsu.pk %}">+ Update kimitsu</a>
+<a href="{% url 'kimitsu_delete' kimitsu.pk %}">+ Delete kimitsu</a>
+
+{% endblock content %}

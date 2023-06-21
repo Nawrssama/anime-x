@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<a href="{% url 'kimitsu_create' %}">+ New Kimitsu charactor</a>
+<ul>
+  {% for k in object_list %}
+  <li>
+    <a href="{% url 'kimitsu_detail' k.pk %}">{{ k.char_name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock content %}
